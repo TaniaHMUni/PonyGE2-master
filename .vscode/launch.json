@@ -8,11 +8,12 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "program": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\ponyge.py",
+            // "program": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\ponyge.py",
+            "program": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\scripts\\experiment_manager.py",
             "console": "integratedTerminal",
-            "cwd": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\",
-            "purpose":["debug-in-terminal"]
-           //"args": ["C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\parameters\\string_match.txt"]
+            "cwd": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src",
+            "purpose":["debug-in-terminal"],
+            "args": ["--parameters","C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\parameters\\clausula_horn.txt"]
         }
     ]
 }

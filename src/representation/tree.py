@@ -1,5 +1,12 @@
+from datetime import datetime
+from os import getcwd, getpid, makedirs, path
 from algorithm.parameters import params
 
+
+from representation.pintar import TreeMio
+from treelib import Tree as TreeLibTree
+import sys
+import graphviz 
 
 class Tree:
 
@@ -235,19 +242,110 @@ class Tree:
 
         return genome, output, invalid, max_depth, nodes
 
-    def print_tree(self):
+
+
+    def print_tree(self,savefile):
         """
         Prints out all nodes in the tree, indented according to node depth.
         
         :return: Nothing.
         """
-
-        print(self.depth, "".join([" " for _ in range(self.depth)]), self.root)
+        
+        #print(self.depth, "".join([" " for _ in range(self.depth)]), self.root)
+        savefile.write(str(self.depth)+"".join([" " for _ in range(self.depth)])+ self.root+"\n")
 
         for child in self.children:
             if not child.children:
-                print(self.depth + 1,
-                      "".join([" " for _ in range(self.depth + 1)]),
-                      child.root)
+                #print(self.depth + 1,"".join([" " for _ in range(self.depth + 1)]),child.root)
+                savefile.write(str(self.depth + 1)+"".join([" " for _ in range(self.depth + 1)])+child.root)
             else:
-                child.print_tree()
+                child.print_tree(savefile)
+
+    def crear_arbol_treelib(self):
+        print("crear_arbol_treelib")
+        if self.treelib_tree is None:
+            self.treelib_tree = TreeLibTree()
+
+        self.treelib_tree.create_node(self.root)
+
+        for child in self.children:
+           child.crear_arbol_treelib()
+
+    def recorrer_arbol(self,treelib_tree, parent=None):
+
+        # Agregar el nodo actual al árbol de treelib
+        current_node = treelib_tree.create_node(tag=self.root, identifier=self.snippet, parent=parent)
+
+        # Recorrer recursivamente los hijos del nodo actual
+        for child in self.children:
+            child.recorrer_arbol( treelib_tree,parent=current_node.identifier) 
+   
+    
+    def pintarMio(self,nombre,pinta=None):
+
+        treelib_tree = TreeLibTree()
+        self.recorrer_arbol(treelib_tree)
+        if pinta!=None:
+            treelib_tree.show()
+
+        filename = path.join(params['FILE_PATH'], ("Pinta.txt"))
+        savefile = open(filename, 'a', encoding="utf-8")
+        savefile.write(nombre)
+        sys.stdout = savefile  # Redirigir la salida a un archivo
+        treelib_tree.show()
+        sys.stdout = sys.__stdout__  # Restaurar la salida estándar
+
+    def recorrer_arbol2(self, grafo, parent=None):
+
+        # Agregar el nodo actual al grafo de Graphviz
+        # print(self.root)
+        grafo.node(str(id(self)),label=self.root)
+
+        if parent is not None:
+            grafo.edge(str(id(parent)),str(id(self)))
+        # Recorrer recursivamente los hijos del nodo actual
+        for child in self.children:
+            # Llamar recursivamente a recorrer_arbol para cada hijo
+            child.recorrer_arbol2(grafo, parent=self)
+   
+    
+ 
+    def pintarMioPng(self,nombre,pinta=None):
+        # Crear un grafo de Graphviz
+        grafo = graphviz.Digraph('round-table', comment='The Round Table') 
+        self.recorrer_arbol2(grafo)
+        # Agregar nodos al grafo
+        start = datetime.now()
+        hms = "%02d%02d%02d" % (start.hour, start.minute, start.second)
+        # Guardar el grafo en un archivo
+        grafo.render(path.join(params['FILE_PATH'], (nombre+"_"+str(start.year)[2:]+str(start.month)+str(start.day)+"_"+hms+"_"+str(start.microsecond)+"_"+str(getpid())+str(params['RANDOM_SEED']))), format='png', cleanup=True)
+
+
+    
+    def recorrer_arbolAlgo(self,grafo, parent=None):
+
+        # Agregar el nodo actual al árbol de treelib
+        grafo.node(self.snippet,label=self.root)
+        if parent is not None:
+            grafo.edge(parent,self.root)
+
+        # Recorrer recursivamente los hijos del nodo actual
+        for child in self.children:
+            child.recorrer_arbol2( grafo,parent=self.snippet) 
+   
+    
+ 
+    def pintarMioAlgo(self,nombre,pinta=None):
+        # Crear un grafo de Graphviz
+        grafo = graphviz.Digraph('round-table', comment='The Round Table') 
+        self.recorrer_arbol2(grafo)
+        # Agregar nodos al grafo
+
+        # Guardar el grafo en un archivo
+        grafo.render('arbol', format='png', cleanup=True)
+
+
+
+
+
+

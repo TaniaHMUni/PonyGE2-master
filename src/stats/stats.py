@@ -1,9 +1,11 @@
 from copy import copy
+from os import path
 from sys import stdout
 from time import time
 
 import numpy as np
 from algorithm.parameters import params
+# from scripts.CasosRegistrados import registro
 from utilities.algorithm.NSGA2 import compute_pareto_metrics
 from utilities.algorithm.state import create_state
 from utilities.stats import trackers
@@ -12,6 +14,7 @@ from utilities.stats.file_io import save_best_ind_to_file, \
 from utilities.stats.save_plots import save_pareto_fitness_plot, \
     save_plot_from_data
 
+from scripts.CasosRegistrados import getRegisto
 """Algorithm statistics"""
 stats = {
     "gen": 0,
@@ -146,6 +149,19 @@ def get_soo_stats(individuals, end):
 
     if end and not params['SILENT']:
         print_final_stats()
+    if end:
+        params['FITNESS_FUNCTION'].evaluate(best,REGISTRO=True)
+        registro = getRegisto()
+        print("Porcentaje pendiente:"+str(registro.getPorcen()))
+        filename =registro.getRuta()+"proceso.txt"
+        savefile = open(filename, 'a')
+        savefile.write("\n"+str(best.phenotype)+"(Generacion)")
+        savefile.close()
+        filename =registro.getRuta()+"teoria.txt"
+        savefile = open(filename, 'a')
+        savefile.write(str(best.phenotype)+"\t clausula de Horn:"+str(registro.getnExperimentos()+1)+"\n")
+        savefile.close()
+
 
 
 def get_moo_stats(individuals, end):
@@ -371,6 +387,9 @@ def print_final_stats():
     else:
         print("\n\nBest:\n  Fitness:\t", trackers.best_ever.fitness)
 
+    # trackers.best_ever.tree.pintarMio("FINAL","SI")
+    trackers.best_ever.tree.pintarMioPng("FINAL","SI")
+    
     print("  Phenotype:", trackers.best_ever.phenotype)
     print("  Genome:", trackers.best_ever.genome)
     print_generation_stats()

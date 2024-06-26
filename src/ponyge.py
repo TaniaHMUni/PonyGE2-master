@@ -17,6 +17,7 @@ import sys
 
 
 def mane():
+ 
     """ Run program """
     set_params(sys.argv[1:])  # exclude the ponyge.py arg itself
 

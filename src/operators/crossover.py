@@ -1,3 +1,6 @@
+from os import getcwd, makedirs, path
+from algorithm.parameters import params
+
 from random import choice, randint, random, sample
 
 from algorithm.parameters import params
@@ -465,7 +468,7 @@ def LTGE_crossover(p_0, p_1):
 
 
 # Set attributes for all operators to define linear or subtree representations.
-variable_onepoint.representation = "linear"
+variable_onepoint.representation = "subtree"
 fixed_onepoint.representation = "linear"
 variable_twopoint.representation = "linear"
 fixed_twopoint.representation = "linear"
