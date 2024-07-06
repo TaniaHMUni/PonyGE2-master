@@ -8,12 +8,13 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            // "program": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\ponyge.py",
-            "program": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src\\scripts\\experiment_manager.py",
+            // "program": "C:\\Users\\TaniaHM\\Documents\\TFG\\TFG-PonyGE2\\src\\ponyge.py",
+            "program": "C:\\Users\\TaniaHM\\Documents\\TFG\\TFG-PonyGE2\\src\\scripts\\experiment_manager.py",
             "console": "integratedTerminal",
-            "cwd": "C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\src",
+            "cwd": "C:\\Users\\TaniaHM\\Documents\\TFG\\TFG-PonyGE2\\src",
             "purpose":["debug-in-terminal"],
-            "args": ["--parameters","C:\\Users\\tania\\Documents\\TFG\\PonyGE2-master\\parameters\\clausula_horn.txt"]
+            "args": ["--parameters","C:\\Users\\TaniaHM\\Documents\\TFG\\TFG-PonyGE2\\parameters\\clausula_horn.txt"]
+            // "args": ["--parameters","C:\\Users\\TaniaHM\\Documents\\TFG\\TFG-PonyGE2\\parameters\\regression.txt"]
         }
     ]
 }

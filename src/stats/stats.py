@@ -149,7 +149,7 @@ def get_soo_stats(individuals, end):
 
     if end and not params['SILENT']:
         print_final_stats()
-    if end:
+    if end and params['TEORIA']:
         params['FITNESS_FUNCTION'].evaluate(best,REGISTRO=True)
         registro = getRegisto()
         print("Porcentaje pendiente:"+str(registro.getPorcen()))

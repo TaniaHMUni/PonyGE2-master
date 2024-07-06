@@ -2,11 +2,11 @@ CACHE:                  True
 CODON_SIZE:             100000
 CROSSOVER:              variable_onepoint
 CROSSOVER_PROBABILITY:  0.75
-DATASET_TRAIN:          clausula_horn/test.csv
+DATASET_TRAIN:          clausula_horn/toy_asynchronous_example.csv
 DEBUG:                  False
 GENERATIONS:            50
 MAX_GENOME_LENGTH:      500
-GRAMMAR_FILE:           clausula_horn\mammalian.bnf
+GRAMMAR_FILE:           clausula_horn\prueba.bnf
 INITIALISATION:         PI_grow
 INVALID_SELECTION:      False
 MAX_INIT_TREE_DEPTH:    10
@@ -18,6 +18,6 @@ REPLACEMENT:            generational
 SELECTION:              tournament
 TOURNAMENT_SIZE:        2
 VERBOSE:                False
-EXPERIMENT_NAME:        Lfit
+EXPERIMENT_NAME:        toy_Y2
 CACHE:                  True
 TEORIA:                 True

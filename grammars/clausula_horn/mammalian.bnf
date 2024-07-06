@@ -1,5 +1,5 @@
 <R>             ::= <O><I>
-<O>             ::= "p27_t("<binario>")"
+<O>             ::= "CycB_t("<binario>")"
 <I>             ::= <CycD_t_1><CycE_t_1><Rb_t_1><E2F_t_1><CycA_t_1><p27_t_1><Cdc20_t_1><UbcH10_t_1><Cdh1_t_1><CycB_t_1>
 <CycD_t_1>      ::= "CycD_t_1("<binario>")" | ""
 <CycE_t_1> 		::= "CycE_t_1("<binario>")" | ""

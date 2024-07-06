@@ -124,9 +124,9 @@ class clausula_horn(base_ff):
         valores = re.findall(r'([^\(\)]+)\((\d+)\)', expr)
         diccionario={clave: valor for clave, valor in valores}
 
-        filename2 =registro.getRuta()+"comprobar.txt"
-        savefile2 = open(filename2, 'a')
-        savefile2.write("\n\n"+expr+"\n")
+        # filename2 =registro.getRuta()+"comprobar.txt"
+        # savefile2 = open(filename2, 'a')
+        # savefile2.write("\n\n"+expr+"\n")
         # Si el resultado es una columna del dataset, sumamos los valores absolutos
         if diccionario[consecuente]!="" and any(clave != consecuente and valor != "" for clave, valor in diccionario.items()):
             # Calcula la suma de los valores absolutos de la columna
@@ -199,7 +199,7 @@ class clausula_horn(base_ff):
                             else:
                                 aCalculo[nPorcen]=nSuma
                         
-                            savefile2.write(str(numero_fila)+"_"+str(nPorcen)+"_"+str(nPeso)+"_"+str(registro.getPorcen())+"_"+str(nTotal)+"___"+str(aCalculo[nPorcen])+"\n")
+                            # savefile2.write(str(numero_fila)+"_"+str(nPorcen)+"_"+str(nPeso)+"_"+str(registro.getPorcen())+"_"+str(nTotal)+"___"+str(aCalculo[nPorcen])+"\n")
                        
             
             nCalulo = sum(clave * valor for clave, valor in aCalculo.items()) / nTotal
@@ -216,13 +216,13 @@ class clausula_horn(base_ff):
                        
             # nCalulo = sum(item[0] * item[1] for item in aCalculo)/nTotal
             fitness = nCalulo
-            savefile2.write("\n"+str(fitness))
-            savefile2.close()
+            # savefile2.write("\n"+str(fitness))
+            # savefile2.close()
             
         else:
             # Si el resultado no es un array, establece el fitness a infinito
             fitness = -1
-            savefile2.write("\n"+str(fitness))
-            savefile2.close()
+            # savefile2.write("\n"+str(fitness))
+            # savefile2.close()
    
         return fitness
