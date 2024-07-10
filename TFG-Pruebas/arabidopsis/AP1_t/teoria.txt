@@ -1,0 +1,10 @@
+Teoria generada:
+AP1_t(1)FT_t_1(1)	 clausula de Horn:1
+AP1_t(0)UFO_t_1(0)	 clausula de Horn:2
+AP1_t(0)AG_t_1(1)	 clausula de Horn:3
+AP1_t(1)WUS_t_1(1)	 clausula de Horn:4
+AP1_t(1)UFO_t_1(1)AG_t_1(0)	 clausula de Horn:5
+AP1_t(1)AG_t_1(0)	 clausula de Horn:6
+AP1_t(0)FUL_t_1(0)FT_t_1(0)AG_t_1(0)TFL1_t_1(1)	 clausula de Horn:7
+AP1_t(0)AP3_t_1(0)FT_t_1(0)	 clausula de Horn:8
+AP1_t(0)LFY_t_1(0)	 clausula de Horn:9

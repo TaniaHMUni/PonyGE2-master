@@ -1,0 +1,13 @@
+Generation:
+50
+
+Phenotype:
+CycA_t(0)CycD_t_1(1)
+
+Genotype:
+[64650, 28693, 42962, 85137, 4890, 81047, 42351, 42351, 73877, 7187, 20011, 6053, 16335, 6531, 8967, 63283, 4326, 93417]
+Tree:
+(<R> (<O> CycA_t( (<binario> 0) )) (<I> (<CycD_t_1> CycD_t_1( (<binario> 1) )) (<CycE_t_1> ) (<Rb_t_1> ) (<E2F_t_1> ) (<CycA_t_1> ) (<p27_t_1> ) (<Cdc20_t_1> ) (<UbcH10_t_1> ) (<Cdh1_t_1> ) (<CycB_t_1> )))
+
+Fitness:
+13.28125

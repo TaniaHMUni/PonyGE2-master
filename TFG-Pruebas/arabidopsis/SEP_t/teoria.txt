@@ -1,0 +1,6 @@
+Teoria generada:
+SEP_t(0)LFY_t_1(0)	 clausula de Horn:1
+SEP_t(1)FT_t_1(1)LFY_t_1(1)	 clausula de Horn:2
+SEP_t(1)FT_t_1(0)LFY_t_1(1)AG_t_1(1)	 clausula de Horn:3
+SEP_t(1)FUL_t_1(0)TFL1_t_1(0)	 clausula de Horn:4
+SEP_t(1)FT_t_1(0)LFY_t_1(1)	 clausula de Horn:5

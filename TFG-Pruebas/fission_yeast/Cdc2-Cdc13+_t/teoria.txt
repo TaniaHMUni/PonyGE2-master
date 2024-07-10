@@ -1,0 +1,8 @@
+Teoria generada:
+Cdc2/Cdc13*_t(0)Slp1_t_1(1)	 clausula de Horn:1
+Cdc2/Cdc13*_t(0)Rum1_t_1(1)	 clausula de Horn:2
+Cdc2/Cdc13*_t(0)Rum1_t_1(0)	 clausula de Horn:3
+Cdc2/Cdc13*_t(1)Ste9_t_1(0)Cdc2/Cdc13_t_1(0)Rum1_t_1(0)Cdc25_t_1(1)Cdc2/Cdc13*_t_1(1)	 clausula de Horn:4
+Cdc2/Cdc13*_t(0)Start_t_1(0)Cdc2/Cdc13*_t_1(0)	 clausula de Horn:5
+Cdc2/Cdc13*_t(1)Start_t_1(0)Ste9_t_1(0)Rum1_t_1(0)Wee1/Mik1_t_1(0)Cdc2/Cdc13*_t_1(1)	 clausula de Horn:6
+Cdc2/Cdc13*_t(1)Start_t_1(1)Ste9_t_1(0)Cdc2/Cdc13_t_1(1)Rum1_t_1(0)Wee1/Mik1_t_1(0)	 clausula de Horn:7

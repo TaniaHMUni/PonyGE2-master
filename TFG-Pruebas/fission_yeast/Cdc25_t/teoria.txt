@@ -1,0 +1,8 @@
+Teoria generada:
+Cdc25_t(1)Cdc25_t_1(1)	 clausula de Horn:1
+Cdc25_t(1)PP_t_1(0)	 clausula de Horn:2
+Cdc25_t(0)PP_t_1(1)	 clausula de Horn:3
+Cdc25_t(0)Ste9_t_1(1)Cdc2/Cdc13_t_1(0)PP_t_1(0)	 clausula de Horn:4
+Cdc25_t(0)Wee1/Mik1_t_1(1)	 clausula de Horn:5
+Cdc25_t(0)SK_t_1(0)	 clausula de Horn:6
+Cdc25_t(0)Ste9_t_1(0)Cdc2/Cdc13_t_1(0)PP_t_1(0)Wee1/Mik1_t_1(0)	 clausula de Horn:7

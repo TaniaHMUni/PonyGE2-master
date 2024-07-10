@@ -1,0 +1,5 @@
+Teoria generada:
+PI_t(1)LFY_t_1(1)	 clausula de Horn:1
+PI_t(0)LFY_t_1(0)	 clausula de Horn:2
+PI_t(0)LFY_t_1(1)	 clausula de Horn:3
+PI_t(1)AP3_t_1(1)	 clausula de Horn:4

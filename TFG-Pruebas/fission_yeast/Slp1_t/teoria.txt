@@ -1,0 +1,3 @@
+Teoria generada:
+Slp1_t(1)Cdc2/Cdc13*_t_1(1)	 clausula de Horn:1
+Slp1_t(0)Cdc2/Cdc13*_t_1(0)	 clausula de Horn:2

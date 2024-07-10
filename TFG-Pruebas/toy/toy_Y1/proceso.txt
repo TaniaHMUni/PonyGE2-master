@@ -1,0 +1,20 @@
+2 (Nuevo) 3 (Nuevo) 7 (Nuevo) 10 (Nuevo) 11 (Nuevo) 
+y1(0)x1(0)(Generacion)
+N.Casos cubiertos:5
+Porcentaje pendiente:61.53846154999997
+
+5 (Nuevo) 6 (Nuevo) 9 (Nuevo) 14 (Nuevo) 
+y1(1)x1(1)(Generacion)
+N.Casos cubiertos:9
+Porcentaje pendiente:30.769230789999973
+
+4 (Nuevo) 8 (Nuevo) 13 (Nuevo) 
+y1(0)x1(1)(Generacion)
+N.Casos cubiertos:12
+Porcentaje pendiente:7.692307719999974
+
+9 (ya cubierto) 12 (Nuevo) 14 (ya cubierto) 
+y1(1)x2(1)(Generacion)
+N.Casos cubiertos:15
+Porcentaje pendiente:2.99999740605017e-08
+

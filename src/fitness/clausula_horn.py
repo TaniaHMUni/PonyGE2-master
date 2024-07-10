@@ -100,37 +100,25 @@ class clausula_horn(base_ff):
 
         # Convierte la representación del individuo en una cadena ejecutable
         expr = str(ind.phenotype)
-        # print(f"Evaluating expression: {expr}")
 
-        # try:
-            # Evalúa la expresión generada por el individuo
+        # Evalúa la expresión generada por el individuo
 
         registro = getRegisto()
 
-        # valores = re.findall(r'\((.*?)\)', expr)
-
-        # # Creamos un diccionario con los nombres de las variables y sus valores
-        # variables = []
 
         consecuente=registro.getConsecuente()
 
-        # variables.append(consecuente)
-
-        # for nvariables in registro.getAntedecentes():
-        #     variables.append(nvariables)
-            
-        # diccionario = dict(zip(variables, valores))
-       
+        
         valores = re.findall(r'([^\(\)]+)\((\d+)\)', expr)
         diccionario={clave: valor for clave, valor in valores}
 
         # filename2 =registro.getRuta()+"comprobar.txt"
         # savefile2 = open(filename2, 'a')
         # savefile2.write("\n\n"+expr+"\n")
+
         # Si el resultado es una columna del dataset, sumamos los valores absolutos
         if diccionario[consecuente]!="" and any(clave != consecuente and valor != "" for clave, valor in diccionario.items()):
-            # Calcula la suma de los valores absolutos de la columna
-        
+          
             fitness = 1
             nFilas=0
 
@@ -145,6 +133,7 @@ class clausula_horn(base_ff):
                 aCalculo ={}
                 csvfile.seek(1)
 
+                # Recorremos los datos del fichero para compararlos uno a uno con los datos obtenidos
                 for numero_fila, fila in enumerate(reader, start=1):
 
                     lOK = False
@@ -203,18 +192,6 @@ class clausula_horn(base_ff):
                        
             
             nCalulo = sum(clave * valor for clave, valor in aCalculo.items()) / nTotal
-            #  nPeso=registro.porcenCaso(numero_fila)
-
-            #                 if nPeso==0:
-
-            #                     aCalculo.append([numero_fila,100])
-                                
-            #                 else:
-            #                     aCalculo.append([numero_fila,registro.porcenSinCubrir])
-                        
-            #                 savefile2.write(str(numero_fila)+"-"+str(nPeso)+"-"+str(registro.porcenSinCubrir))
-                       
-            # nCalulo = sum(item[0] * item[1] for item in aCalculo)/nTotal
             fitness = nCalulo
             # savefile2.write("\n"+str(fitness))
             # savefile2.close()

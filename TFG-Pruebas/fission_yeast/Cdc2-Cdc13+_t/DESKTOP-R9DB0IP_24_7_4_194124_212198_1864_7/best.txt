@@ -1,0 +1,13 @@
+Generation:
+50
+
+Phenotype:
+Cdc2/Cdc13*_t(1)Start_t_1(1)Ste9_t_1(0)Cdc2/Cdc13_t_1(1)Rum1_t_1(0)Wee1/Mik1_t_1(0)
+
+Genotype:
+[76008, 12267, 91363, 95834, 38492, 2957, 78707, 64708, 37674, 52152, 10561, 46222, 56428, 92589, 89485, 89485, 19780, 19830, 30403, 86313, 30583, 1581, 63565, 77217, 23900, 34438]
+Tree:
+(<R> (<O> Cdc2/Cdc13*_t( (<binario> 1) )) (<I> (<Start_t_1> Start_t_1( (<binario> 1) )) (<SK_t_1> ) (<Ste9_t_1> Ste9_t_1( (<binario> 0) )) (<Cdc2/Cdc13_t_1> Cdc2/Cdc13_t_1( (<binario> 1) )) (<Rum1_t_1> Rum1_t_1( (<binario> 0) )) (<PP_t_1> ) (<Cdc25_t_1> ) (<Slp1_t_1> ) (<Wee1/Mik1_t_1> Wee1/Mik1_t_1( (<binario> 0) )) (<Cdc2/Cdc13*_t_1> )))
+
+Fitness:
+0.390625

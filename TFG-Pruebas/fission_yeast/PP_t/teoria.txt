@@ -1,0 +1,5 @@
+Teoria generada:
+PP_t(1)Slp1_t_1(1)	 clausula de Horn:1
+PP_t(1)Start_t_1(0)Slp1_t_1(1)	 clausula de Horn:2
+PP_t(0)Ste9_t_1(0)	 clausula de Horn:3
+PP_t(0)Slp1_t_1(0)	 clausula de Horn:4

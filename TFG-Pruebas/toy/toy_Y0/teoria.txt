@@ -1,0 +1,5 @@
+Teoria generada:
+y0(0)x0(0)	 clausula de Horn:1
+y0(1)x2(1)	 clausula de Horn:2
+y0(1)x1(1)	 clausula de Horn:3
+y0(0)x1(0)	 clausula de Horn:4

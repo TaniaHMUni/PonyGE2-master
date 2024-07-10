@@ -1,0 +1,6 @@
+Teoria generada:
+CycB_t(0)CycB_t_1(1)	 clausula de Horn:1
+CycB_t(0)Cdc20_t_1(1)	 clausula de Horn:2
+CycB_t(1)CycE_t_1(0)Cdc20_t_1(0)	 clausula de Horn:3
+CycB_t(0)Cdh1_t_1(1)	 clausula de Horn:4
+CycB_t(1)Cdh1_t_1(0)	 clausula de Horn:5

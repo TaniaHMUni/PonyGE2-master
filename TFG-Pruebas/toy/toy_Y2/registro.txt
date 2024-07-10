@@ -1,0 +1,7 @@
+nColumnas:6
+nFilas:13
+porcenSinCubrir:2.99999740605017e-08
+nExperimentos:4
+consecuente:y2
+casos:2,3,6,8,9,4,5,7,13,3,8,9,11,12,7,10,13,14,
+antedecentes:x0,x1,x2,x0,x1,x2,x0,x1,x2,x0,x1,x2,x0,x1,x2,

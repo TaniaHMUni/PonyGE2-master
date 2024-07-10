@@ -1,0 +1,8 @@
+Teoria generada:
+Ste9_t(0)Cdc2/Cdc13*_t_1(1)	 clausula de Horn:1
+Ste9_t(0)Start_t_1(1)	 clausula de Horn:2
+Ste9_t(1)PP_t_1(1)	 clausula de Horn:3
+Ste9_t(0)Start_t_1(0)	 clausula de Horn:4
+Ste9_t(0)Ste9_t_1(0)	 clausula de Horn:5
+Ste9_t(1)Slp1_t_1(1)	 clausula de Horn:6
+Ste9_t(1)Cdc2/Cdc13*_t_1(0)	 clausula de Horn:7

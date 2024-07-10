@@ -1,0 +1,5 @@
+Teoria generada:
+p27_t(0)CycA_t_1(1)	 clausula de Horn:1
+p27_t(0)CycA_t_1(0)	 clausula de Horn:2
+p27_t(1)CycD_t_1(0)CycA_t_1(0)CycB_t_1(0)	 clausula de Horn:3
+p27_t(1)CycD_t_1(0)	 clausula de Horn:4
